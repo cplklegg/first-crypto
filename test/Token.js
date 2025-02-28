@@ -13,7 +13,7 @@ describe('Token', () => {
   beforeEach(async () => {
     // Fetch Token from Blockchain
     const Token = await ethers.getContractFactory('Token')
-    token = await Token.deploy('Dapp U', 'DAPP', 1000000)
+    token = await Token.deploy('Sakura', 'SKR', 1000000)
     accounts = await ethers.getSigners()
     deployer = accounts[0]
     receiver = accounts[1]
@@ -21,8 +21,8 @@ describe('Token', () => {
   })
 
   describe('Deployment', () => {
-    const name = 'Dapp U'
-    const symbol = 'DAPP'
+    const name = 'Sakura'
+    const symbol = 'SKR'
     const decimals = '18'
     const totalSupply = tokens('1000000')
     it('has correct name', async () => {    
